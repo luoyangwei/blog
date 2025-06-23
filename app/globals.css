@@ -134,7 +134,7 @@ body {
 @font-face {
     font-family: 'NeoSongPlus';
     src: url('/fonts/LXGWNeoZhiSongPlus.ttf') format('truetype');
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
 }
 
@@ -160,8 +160,4 @@ h5 {
 
 h6 {
     @apply scroll-m-20 pb-2 text-base font-semibold tracking-tight;
-}
-
-ul {
-    @apply my-6 ml-6 list-disc [&>li]:mt-2;
 }
