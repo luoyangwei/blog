@@ -161,3 +161,30 @@ h5 {
 h6 {
     @apply scroll-m-20 pb-2 text-base font-semibold tracking-tight;
 }
+
+/* app/globals.css */
+pre code .line {
+    display: block;
+    min-height: 1rem;
+    line-height: 1.75;
+    /* 可以调整行高 */
+}
+
+pre code .line--highlighted {
+    @apply bg-zinc-800/50;
+    display: block;
+    margin-right: -1rem;
+    margin-left: -1rem;
+    padding-right: 1rem;
+    padding-left: 0.75rem;
+    border-left: 0.25rem solid theme('colors.blue.500');
+}
+
+code[data-line-numbers]>.line::before {
+    content: attr(data-line);
+    display: inline-block;
+    width: 2rem;
+    margin-right: 1.5rem;
+    text-align: right;
+    color: theme('colors.zinc.600');
+}

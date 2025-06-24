@@ -1,5 +1,4 @@
-import { Code } from "@/components/code"
-import { PageTitle } from "@/components/page-title"
+import { PageTitle } from "@/components/mdx/page-title"
 
 <PageTitle 
     title="6 Technical Skills A Non-Technical Startup Founder Needs to Have" 
@@ -21,8 +20,7 @@ Nginx 的主配置文件是 nginx.conf, 这个配置文件一共由三部分组�
 比如, 某指令同时出现在http全局块中和server块中, 并且配置不同, 则应该以server块中的配置为准。
 <br/>
 整个配置文件的结构大致如下: 
-<Code code={`
-\`\`\`nginx {4} showLineNumbers
+```nginx showLineNumbers title="nginx.conf"
 #全局块
 #user  nobody;
 worker_processes  1;
@@ -59,16 +57,4 @@ http {
       ...
     }
 }
-\`\`\`
-`}></Code>
-
-{/* # Taxing Laughter: The Joke Tax Chronicles
-# 这同样是一段中文文字来展示字体的样式
-# 这同样是一段中文文字来展示字体的样式
-# 这同样是一段中文文字来展示字体的样式 */}
-
-{/* <Code code={`
-\`\`\`ts {4} showLineNumbers
-const add = (a: number, b: number): number => a + b;
-\`\`\`
-`}></Code> */}
+```
