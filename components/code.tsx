@@ -12,7 +12,7 @@ import { transformerCopyButton } from '@rehype-pretty/transformers';
 export async function Code({ code }: { code: string }) {
     const highlightedCode = await highlightCode(code);
     return (
-        <section
+        <section className='my-2'
             dangerouslySetInnerHTML={{
                 __html: highlightedCode,
             }}
