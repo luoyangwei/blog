@@ -2,6 +2,7 @@ import { ArrowRightIcon } from "lucide-react"
 import { Button } from "../ui/button"
 import { Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card"
 import { ScrollArea, ScrollBar } from "../ui/scroll-area"
+import Link from "next/link"
 
 export function CardHorizontalList({ children }: { children: React.ReactNode[] }) {
     return (
@@ -15,7 +16,7 @@ export function CardHorizontalList({ children }: { children: React.ReactNode[] }
     )
 }
 
-export function CardHorizontalListItem({ title, description, content }: { title: string, description: string, content: string }) {
+export function CardHorizontalListItem({ title, description, content, link }: { title: string, description: string, content: string, link?: string }) {
     return (
         <Card className="flex-1">
             <CardHeader>
@@ -25,7 +26,11 @@ export function CardHorizontalListItem({ title, description, content }: { title:
             <CardContent>{content}</CardContent>
             <CardFooter>
                 <CardAction>
-                    <Button>Link <ArrowRightIcon /> </Button>
+                    <Button asChild>
+                        <Link href={link ?? "#"} target="_blank">
+                            Link <ArrowRightIcon />
+                        </Link>
+                    </Button>
                 </CardAction>
             </CardFooter>
         </Card>
