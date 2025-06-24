@@ -7,9 +7,10 @@ export default function BlogLayout({ children }: { children: React.ReactNode }) 
             <div className="flex items-start justify-between w-full">
                 <div className="w-[300px] h-full fixed top-0 bottom-0 left-0"></div>
                 <div className="h-fit flex-1 px-[300px]">
-                    {children}                    
+                    {children}
                 </div>
-                <div className="w-[300px] h-full fixed top-0 bottom-0 right-0"></div>
+                <div className="w-[300px] h-full fixed top-0 bottom-0 right-0">
+                </div>
             </div>
         </div>
     )

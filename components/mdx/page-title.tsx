@@ -14,8 +14,16 @@ export interface PageUserInfo {
 }
 
 export function PageTitle({ title, description, releaseTime, userInfo }: PageTitleProps) {
+    if (userInfo == null) {
+        userInfo = {
+            avatar: "/images/20250624110803_10.jpg",
+            name: "Luoyangwei",
+            description: "luoyw1106703846@gamil.com"
+        }
+    }
+
     return (
-        <div className="flex flex-col gap-10 pt-18 pb-10 tracking-tight">
+        <div className="flex flex-col gap-8 py-18 tracking-tight">
             <p className="text-muted-foreground text-center">{releaseTime}</p>
             <h1>{title}</h1>
             <p className="text-muted-foreground text-center">{description}</p>
