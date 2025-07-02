@@ -1,4 +1,5 @@
 import { PageTitle } from "@/components/mdx/page-title"
+import { PageView } from "@/components/page-view"
 import FactoryPattern from "@/content/java/design-pattern/factory-pattern.mdx"
 import type { Metadata } from "next"
 
@@ -15,15 +16,10 @@ export const metadata: Metadata = {
 
 export default function FactoryPatternPage() {
     return (
-        <>
-            <PageTitle
-                title={"工厂模式"}
-                description={metadata.description ?? ""}
-                releaseTime="2025-06-24"
-            />
+        <PageView {...metadata} releaseTime="2025-06-24">
             <div className="prose prose-zinc dark:prose-invert max-w-none">
                 <FactoryPattern />
             </div>
-        </>
+        </PageView>
     )
 }

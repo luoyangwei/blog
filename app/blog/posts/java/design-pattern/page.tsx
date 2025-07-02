@@ -1,4 +1,5 @@
 import { PageTitle } from "@/components/mdx/page-title"
+import { PageView } from "@/components/page-view"
 import DesignPattern from "@/content/java/design-pattern/main.mdx"
 import type { Metadata } from "next"
 
@@ -11,15 +12,10 @@ export const metadata: Metadata = {
 
 export default function DesignPatternPage() {
     return (
-        <>
-            <PageTitle
-                title={"设计模式"}
-                description={metadata.description ?? ""}
-                releaseTime="2025-06-24"
-            />
+        <PageView {...metadata} releaseTime="2025-06-24">
             <div className="prose prose-zinc dark:prose-invert max-w-none">
                 <DesignPattern />
             </div>
-        </>
+        </PageView>
     )
 }
